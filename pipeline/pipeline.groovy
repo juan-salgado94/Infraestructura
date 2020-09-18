@@ -57,7 +57,7 @@ pipeline {
                         clusterName: "cluster-salgado",
                         zone: "us-central1-c",
                         manifestPattern: "${DEPLOY_FOLDER}/",
-                        credentialsId: "My First Project",
+                        credentialsId: "salgadodocker",
                         verifyDeployments: true])
             }
         }

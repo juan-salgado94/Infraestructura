@@ -40,7 +40,7 @@ pipeline {
         stage("Push image") {
             steps {
                 script {
-                    docker.withRegistry('', 'My First Project') {
+                    docker.withRegistry('', 'salgadodocker') {
                     dockerImage.push()
                     }
                 }

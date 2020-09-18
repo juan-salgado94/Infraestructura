@@ -40,7 +40,7 @@ pipeline {
         stage("Push image") {
             steps {
                 script {
-                    docker.withRegistry('', 'salgadodocker') {
+                    docker.withRegistry('', 'My First Project') {
                     dockerImage.push()
                     }
                 }
@@ -57,7 +57,7 @@ pipeline {
                         clusterName: "cluster-salgado",
                         zone: "us-central1-c",
                         manifestPattern: "${DEPLOY_FOLDER}/",
-                        credentialsId: "salgadodocker",
+                        credentialsId: "My First Project",
                         verifyDeployments: true])
             }
         }
